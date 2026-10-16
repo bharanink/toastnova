@@ -33,14 +33,11 @@ This checklist tracks the release readiness of `toastnova` for its initial relea
    - Click **New repository secret**.
    - Name: `NPM_TOKEN`
    - Value: *(Paste your npm access token)*
-3. **Trigger the Release**:
-   - Push a version tag:
-     ```bash
-     git tag v0.1.0
-     git push origin v0.1.0
-     ```
-   - *Or* create a release via GitHub Releases.
-   - *Or* run the workflow manually under **Actions** > **Publish Package to NPM** > **Run workflow**.
+3. **Trigger the Release Manually**:
+   - Go to: **[https://github.com/bharanink/toastnova/actions/workflows/publish.yml](https://github.com/bharanink/toastnova/actions/workflows/publish.yml)**
+   - Click the **Run workflow** dropdown button.
+   - Click the green **Run workflow** button.
+   - The workflow will build, test, and publish `toastnova` to npm.
 
 ---
 
