@@ -41,6 +41,10 @@ describe('Public Exports and Declarations', () => {
 
   it('generates dist artifacts matching package.json exports', () => {
     const distPath = path.resolve(__dirname, '../dist');
+    if (!fs.existsSync(distPath) || !fs.existsSync(path.join(distPath, 'index.js'))) {
+      const { execSync } = require('child_process');
+      execSync('npm run build', { cwd: path.resolve(__dirname, '..'), stdio: 'pipe' });
+    }
     expect(fs.existsSync(distPath)).toBe(true);
 
     const esmBundle = path.join(distPath, 'index.js');
