@@ -24,7 +24,27 @@ This checklist tracks the release readiness of `toastnova` for its initial relea
 
 ## Publishing Instructions for Maintainer
 
-When ready to publish to the npm public registry:
+### Method A: Automated Release via GitHub Actions (Recommended)
+
+1. **Create an NPM Access Token**:
+   - Go to [npmjs.com](https://www.npmjs.com) > **Access Tokens** > **Generate New Token** (Granular Access Token or Classic Automation Token with Read and Write permissions).
+2. **Add to GitHub Repository Secrets**:
+   - Go to [https://github.com/bharanink/toastnova/settings/secrets/actions](https://github.com/bharanink/toastnova/settings/secrets/actions)
+   - Click **New repository secret**.
+   - Name: `NPM_TOKEN`
+   - Value: *(Paste your npm access token)*
+3. **Trigger the Release**:
+   - Push a version tag:
+     ```bash
+     git tag v0.1.0
+     git push origin v0.1.0
+     ```
+   - *Or* create a release via GitHub Releases.
+   - *Or* run the workflow manually under **Actions** > **Publish Package to NPM** > **Run workflow**.
+
+---
+
+### Method B: Manual Publishing via Local Terminal
 
 1. **Verify your npm authentication**:
    ```bash
@@ -42,9 +62,9 @@ When ready to publish to the npm public registry:
 
 3. **Publish the package**:
    ```bash
-   # For standard public package:
    npm publish --access public
    ```
 
 > [!NOTE]
 > Do not publish if any pending items on this checklist remain unconfirmed.
+
