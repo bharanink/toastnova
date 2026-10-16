@@ -1,0 +1,85 @@
+/* Dark Theme */
+.toastnova-theme-dark {
+  --toastnova-bg: #161b26;
+  --toastnova-text: #f8fafc;
+  --toastnova-text-muted: #94a3b8;
+  --toastnova-border: rgba(255, 255, 255, 0.09);
+  --toastnova-shadow: 0 14px 34px -4px rgba(0, 0, 0, 0.65), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --toastnova-radius: 12px;
+  --toastnova-blur: 0px;
+
+  /* Type-specific accents */
+  --toastnova-accent-success: #10b981;
+  --toastnova-accent-error: #ef4444;
+  --toastnova-accent-warning: #f59e0b;
+  --toastnova-accent-info: #3b82f6;
+  --toastnova-accent-loading: #a855f7;
+  --toastnova-accent-default: #64748b;
+}
+
+.toastnova-theme-dark .toastnova-toast {
+  background: var(--toastnova-bg);
+  color: var(--toastnova-text);
+  border: 1px solid var(--toastnova-border);
+  box-shadow: var(--toastnova-shadow);
+  border-radius: var(--toastnova-radius);
+  position: relative;
+}
+
+/* Dark theme status variants */
+.toastnova-theme-dark .toastnova-success {
+  border-left: 3px solid var(--toastnova-accent-success);
+}
+.toastnova-theme-dark .toastnova-success .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-success);
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.toastnova-theme-dark .toastnova-error {
+  border-left: 3px solid var(--toastnova-accent-error);
+}
+.toastnova-theme-dark .toastnova-error .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-error);
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.toastnova-theme-dark .toastnova-warning {
+  border-left: 3px solid var(--toastnova-accent-warning);
+}
+.toastnova-theme-dark .toastnova-warning .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-warning);
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.toastnova-theme-dark .toastnova-info {
+  border-left: 3px solid var(--toastnova-accent-info);
+}
+.toastnova-theme-dark .toastnova-info .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-info);
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.toastnova-theme-dark .toastnova-loading {
+  border-left: 3px solid var(--toastnova-accent-loading);
+}
+.toastnova-theme-dark .toastnova-loading .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-loading);
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.toastnova-theme-dark .toastnova-default {
+  border-left: 3px solid var(--toastnova-accent-default);
+}
+.toastnova-theme-dark .toastnova-default .toastnova-icon-wrapper {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Close button for Dark theme */
+.toastnova-theme-dark .toastnova-close-btn {
+  color: var(--toastnova-text-muted);
+}
+.toastnova-theme-dark .toastnova-close-btn:hover {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.1);
+}

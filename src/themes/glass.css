@@ -1,0 +1,174 @@
+:root {
+  --toastnova-bg: rgba(18, 22, 34, 0.78);
+  --toastnova-text: #f8fafc;
+  --toastnova-text-muted: #94a3b8;
+  --toastnova-border: rgba(255, 255, 255, 0.14);
+  --toastnova-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.18);
+  --toastnova-radius: 14px;
+  --toastnova-blur: 16px;
+
+  /* Type-specific accents */
+  --toastnova-accent-success: #10b981;
+  --toastnova-accent-error: #ef4444;
+  --toastnova-accent-warning: #f59e0b;
+  --toastnova-accent-info: #3b82f6;
+  --toastnova-accent-loading: #a855f7;
+  --toastnova-accent-default: #64748b;
+}
+
+/* Glass Theme Toast Item */
+.toastnova-theme-glass .toastnova-toast {
+  background: var(--toastnova-bg);
+  color: var(--toastnova-text);
+  border: 1px solid var(--toastnova-border);
+  box-shadow: var(--toastnova-shadow);
+  border-radius: var(--toastnova-radius);
+  backdrop-filter: blur(var(--toastnova-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--toastnova-blur)) saturate(180%);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* Subtle top reflection specular highlight */
+.toastnova-theme-glass .toastnova-toast::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  pointer-events: none;
+}
+
+/* Fallback for browsers lacking backdrop-filter support */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .toastnova-theme-glass .toastnova-toast {
+    background: rgba(22, 27, 40, 0.96) !important;
+    border-color: rgba(255, 255, 255, 0.18) !important;
+  }
+}
+
+/* Hover elevation */
+.toastnova-theme-glass .toastnova-toast:hover {
+  box-shadow: 0 20px 42px -6px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.14), inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Type Accents & Glows */
+.toastnova-theme-glass .toastnova-success {
+  border-left: 3px solid var(--toastnova-accent-success);
+}
+.toastnova-theme-glass .toastnova-success .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-success);
+  background: rgba(16, 185, 129, 0.16);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+.toastnova-theme-glass .toastnova-error {
+  border-left: 3px solid var(--toastnova-accent-error);
+}
+.toastnova-theme-glass .toastnova-error .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-error);
+  background: rgba(239, 68, 68, 0.16);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+}
+
+.toastnova-theme-glass .toastnova-warning {
+  border-left: 3px solid var(--toastnova-accent-warning);
+}
+.toastnova-theme-glass .toastnova-warning .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-warning);
+  background: rgba(245, 158, 11, 0.16);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.toastnova-theme-glass .toastnova-info {
+  border-left: 3px solid var(--toastnova-accent-info);
+}
+.toastnova-theme-glass .toastnova-info .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-info);
+  background: rgba(59, 130, 246, 0.16);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+}
+
+.toastnova-theme-glass .toastnova-loading {
+  border-left: 3px solid var(--toastnova-accent-loading);
+}
+.toastnova-theme-glass .toastnova-loading .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-loading);
+  background: rgba(168, 85, 247, 0.16);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+}
+
+.toastnova-theme-glass .toastnova-default {
+  border-left: 3px solid var(--toastnova-accent-default);
+}
+.toastnova-theme-glass .toastnova-default .toastnova-icon-wrapper {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Icon Wrapper */
+.toastnova-icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-top: 1px;
+}
+
+.toastnova-icon-svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Spinning Animation for Loading */
+@keyframes toastnova-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toastnova-spinner {
+  animation: toastnova-spin 0.85s linear infinite;
+}
+
+/* Close Button */
+.toastnova-close-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: var(--toastnova-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  outline: none;
+}
+
+.toastnova-close-btn:hover {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.toastnova-close-btn:focus-visible {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px var(--toastnova-accent-info);
+}
+
+.toastnova-close-svg {
+  width: 14px;
+  height: 14px;
+}

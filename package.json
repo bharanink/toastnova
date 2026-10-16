@@ -1,0 +1,84 @@
+{
+  "name": "toastnova",
+  "version": "0.1.0",
+  "description": "A modern, customizable React toast notification library featuring 6 built-in themes, physics-based animations, and accessible queue management.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "*.css",
+    "./dist/styles.css"
+  ],
+  "scripts": {
+    "dev": "vite --config vite.config.demo.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "benchmark": "node benchmarks/workload.bench.js",
+    "build:docs": "vite build --config vite.config.demo.ts",
+    "validate": "npm run typecheck && npm test && npm run build && npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^26.6.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.8"
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "notifications",
+    "glassmorphism",
+    "toaster",
+    "alerts",
+    "typescript",
+    "themes",
+    "animations",
+    "accessibility",
+    "swipe-to-dismiss"
+  ],
+  "author": "ToastNova Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bharanink/toastnova.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bharanink/toastnova/issues"
+  },
+  "homepage": "https://bharanink.github.io/toastnova/"
+}

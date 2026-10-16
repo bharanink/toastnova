@@ -1,0 +1,88 @@
+/* Light Theme */
+.toastnova-theme-light {
+  --toastnova-bg: #ffffff;
+  --toastnova-text: #0f172a;
+  --toastnova-text-muted: #64748b;
+  --toastnova-border: #e2e8f0;
+  --toastnova-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.09), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --toastnova-radius: 12px;
+  --toastnova-blur: 0px;
+
+  /* Type-specific accents */
+  --toastnova-accent-success: #059669;
+  --toastnova-accent-error: #dc2626;
+  --toastnova-accent-warning: #d97706;
+  --toastnova-accent-info: #2563eb;
+  --toastnova-accent-loading: #7c3aed;
+  --toastnova-accent-default: #475569;
+}
+
+.toastnova-theme-light .toastnova-toast {
+  background: var(--toastnova-bg);
+  color: var(--toastnova-text);
+  border: 1px solid var(--toastnova-border);
+  box-shadow: var(--toastnova-shadow);
+  border-radius: var(--toastnova-radius);
+  position: relative;
+}
+
+/* Light theme type accents */
+.toastnova-theme-light .toastnova-success {
+  border-left: 3px solid var(--toastnova-accent-success);
+}
+.toastnova-theme-light .toastnova-success .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-success);
+  background: rgba(5, 150, 105, 0.12);
+}
+
+.toastnova-theme-light .toastnova-error {
+  border-left: 3px solid var(--toastnova-accent-error);
+}
+.toastnova-theme-light .toastnova-error .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-error);
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.toastnova-theme-light .toastnova-warning {
+  border-left: 3px solid var(--toastnova-accent-warning);
+}
+.toastnova-theme-light .toastnova-warning .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-warning);
+  background: rgba(217, 119, 6, 0.12);
+}
+
+.toastnova-theme-light .toastnova-info {
+  border-left: 3px solid var(--toastnova-accent-info);
+}
+.toastnova-theme-light .toastnova-info .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-info);
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.toastnova-theme-light .toastnova-loading {
+  border-left: 3px solid var(--toastnova-accent-loading);
+}
+.toastnova-theme-light .toastnova-loading .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-loading);
+  background: rgba(124, 58, 237, 0.12);
+}
+
+.toastnova-theme-light .toastnova-default {
+  border-left: 3px solid var(--toastnova-accent-default);
+}
+.toastnova-theme-light .toastnova-default .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-default);
+  background: rgba(71, 85, 105, 0.12);
+}
+
+/* Close button for Light theme */
+.toastnova-theme-light .toastnova-close-btn {
+  color: var(--toastnova-text-muted);
+}
+.toastnova-theme-light .toastnova-close-btn:hover {
+  color: var(--toastnova-text);
+  background: rgba(0, 0, 0, 0.06);
+}
+.toastnova-theme-light .toastnova-close-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--toastnova-accent-info);
+}

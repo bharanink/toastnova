@@ -1,0 +1,71 @@
+/* Gradient Theme */
+.toastnova-theme-gradient {
+  --toastnova-bg: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --toastnova-text: #ffffff;
+  --toastnova-text-muted: rgba(255, 255, 255, 0.85);
+  --toastnova-border: rgba(255, 255, 255, 0.22);
+  --toastnova-shadow: 0 14px 34px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --toastnova-radius: 14px;
+  --toastnova-blur: 0px;
+
+  /* Accent highlights */
+  --toastnova-accent-success: #34d399;
+  --toastnova-accent-error: #f87171;
+  --toastnova-accent-warning: #fbbf24;
+  --toastnova-accent-info: #60a5fa;
+  --toastnova-accent-loading: #c084fc;
+  --toastnova-accent-default: #e2e8f0;
+}
+
+.toastnova-theme-gradient .toastnova-toast {
+  color: var(--toastnova-text);
+  border: 1px solid var(--toastnova-border);
+  box-shadow: var(--toastnova-shadow);
+  border-radius: var(--toastnova-radius);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.toastnova-theme-gradient .toastnova-success {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
+  box-shadow: 0 14px 34px -4px rgba(4, 120, 87, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.toastnova-theme-gradient .toastnova-error {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 50%, #b91c1c 100%);
+  box-shadow: 0 14px 34px -4px rgba(153, 27, 27, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.toastnova-theme-gradient .toastnova-warning {
+  background: linear-gradient(135deg, #78350f 0%, #92400e 50%, #b45309 100%);
+  box-shadow: 0 14px 34px -4px rgba(146, 64, 14, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.toastnova-theme-gradient .toastnova-info {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+  box-shadow: 0 14px 34px -4px rgba(29, 78, 216, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.toastnova-theme-gradient .toastnova-loading {
+  background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #7c3aed 100%);
+  box-shadow: 0 14px 34px -4px rgba(109, 40, 217, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.toastnova-theme-gradient .toastnova-default {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+.toastnova-theme-gradient .toastnova-icon-wrapper {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.toastnova-theme-gradient .toastnova-close-btn {
+  color: rgba(255, 255, 255, 0.75);
+}
+.toastnova-theme-gradient .toastnova-close-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}

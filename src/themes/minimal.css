@@ -1,0 +1,98 @@
+/* Minimal Theme */
+.toastnova-theme-minimal {
+  --toastnova-bg: #12151c;
+  --toastnova-text: #f1f5f9;
+  --toastnova-text-muted: #8492a6;
+  --toastnova-border: rgba(255, 255, 255, 0.08);
+  --toastnova-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.35);
+  --toastnova-radius: 8px;
+  --toastnova-blur: 0px;
+
+  /* Restrained accents */
+  --toastnova-accent-success: #10b981;
+  --toastnova-accent-error: #ef4444;
+  --toastnova-accent-warning: #f59e0b;
+  --toastnova-accent-info: #3b82f6;
+  --toastnova-accent-loading: #8b5cf6;
+  --toastnova-accent-default: #64748b;
+}
+
+.toastnova-theme-minimal .toastnova-toast {
+  background: var(--toastnova-bg);
+  color: var(--toastnova-text);
+  border: 1px solid var(--toastnova-border);
+  box-shadow: var(--toastnova-shadow);
+  border-radius: var(--toastnova-radius);
+  padding: 10px 12px;
+  gap: 10px;
+  position: relative;
+}
+
+/* Subtle 2px minimalist border indicator */
+.toastnova-theme-minimal .toastnova-success {
+  border-left: 2.5px solid var(--toastnova-accent-success);
+}
+.toastnova-theme-minimal .toastnova-success .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-success);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-error {
+  border-left: 2.5px solid var(--toastnova-accent-error);
+}
+.toastnova-theme-minimal .toastnova-error .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-error);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-warning {
+  border-left: 2.5px solid var(--toastnova-accent-warning);
+}
+.toastnova-theme-minimal .toastnova-warning .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-warning);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-info {
+  border-left: 2.5px solid var(--toastnova-accent-info);
+}
+.toastnova-theme-minimal .toastnova-info .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-info);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-loading {
+  border-left: 2.5px solid var(--toastnova-accent-loading);
+}
+.toastnova-theme-minimal .toastnova-loading .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-loading);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-default {
+  border-left: 2.5px solid var(--toastnova-accent-default);
+}
+.toastnova-theme-minimal .toastnova-default .toastnova-icon-wrapper {
+  color: var(--toastnova-accent-default);
+  background: transparent;
+}
+
+.toastnova-theme-minimal .toastnova-icon-wrapper {
+  width: 22px;
+  height: 22px;
+  margin-top: 0;
+}
+
+.toastnova-theme-minimal .toastnova-icon-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.toastnova-theme-minimal .toastnova-close-btn {
+  padding: 2px;
+  color: var(--toastnova-text-muted);
+}
+.toastnova-theme-minimal .toastnova-close-btn:hover {
+  color: var(--toastnova-text);
+  background: rgba(255, 255, 255, 0.08);
+}
