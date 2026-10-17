@@ -30,6 +30,29 @@ export function App() {
   const [duplicateStrategy, setDuplicateStrategy] = useState<ToastDuplicateStrategy>('group');
   const [dedupeWindow, setDedupeWindow] = useState<number>(2000);
 
+  // Website light/dark theme preference
+  const [docsTheme, setDocsTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('toastnova-docs-theme') as 'dark' | 'light' | null;
+      if (saved === 'dark' || saved === 'light') return saved;
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        return 'light';
+      }
+    }
+    return 'dark';
+  });
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', docsTheme);
+      localStorage.setItem('toastnova-docs-theme', docsTheme);
+    }
+  }, [docsTheme]);
+
+  const handleToggleDocsTheme = () => {
+    setDocsTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
   // Navigation & UI state
   const [activeSection, setActiveSection] = useState<string>('section-overview');
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
@@ -117,6 +140,8 @@ export function App() {
         onNavigate={handleNavigate}
         mobileMenuOpen={mobileMenuOpen}
         onToggleMobileMenu={() => setMobileMenuOpen((prev) => !prev)}
+        docsTheme={docsTheme}
+        onToggleDocsTheme={handleToggleDocsTheme}
       />
 
       <div className="doc-layout">

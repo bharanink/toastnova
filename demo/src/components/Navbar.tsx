@@ -6,6 +6,8 @@ interface NavbarProps {
   onNavigate: (sectionId: string) => void;
   mobileMenuOpen: boolean;
   onToggleMobileMenu: () => void;
+  docsTheme?: 'dark' | 'light';
+  onToggleDocsTheme?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -13,7 +15,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   onNavigate,
   mobileMenuOpen,
-  onToggleMobileMenu
+  onToggleMobileMenu,
+  docsTheme = 'dark',
+  onToggleDocsTheme
 }) => {
   return (
     <header className="doc-navbar">
@@ -103,6 +107,28 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="doc-search-placeholder">Search docs...</span>
             <kbd className="doc-search-shortcut">Ctrl+K</kbd>
           </button>
+
+          {/* Dark / Light Theme Toggle Button */}
+          {onToggleDocsTheme && (
+            <button
+              type="button"
+              className="doc-theme-toggle"
+              onClick={onToggleDocsTheme}
+              aria-label={docsTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+              title={docsTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+            >
+              {docsTheme === 'dark' ? (
+                <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <circle cx="10" cy="10" r="4" />
+                  <path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.34 4.34l1.42 1.42M14.24 14.24l1.42 1.42M4.34 15.66l1.42-1.42M14.24 5.76l1.42-1.42" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+            </button>
+          )}
 
           {/* GitHub Repository Link */}
           <a

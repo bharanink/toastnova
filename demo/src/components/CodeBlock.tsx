@@ -6,6 +6,8 @@ interface CodeBlockProps {
   title?: string;
 }
 
+import { HighlightedCode } from '../utils/syntaxHighlighter';
+
 export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'tsx', title }) => {
   const [copied, setCopied] = useState(false);
 
@@ -63,7 +65,27 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'tsx', ti
         </button>
       </div>
       <pre className="doc-code-pre">
-        <code>{code.trim()}</code>
+        <code className="doc-code-content">
+          <span
+            className="doc-code-sr-text"
+            style={{
+              position: 'absolute',
+              width: '1px',
+              height: '1px',
+              padding: 0,
+              margin: '-1px',
+              overflow: 'hidden',
+              clip: 'rect(0, 0, 0, 0)',
+              whiteSpace: 'pre',
+              border: 0
+            }}
+          >
+            {code.trim()}
+          </span>
+          <span aria-hidden="true" className="doc-code-visual">
+            <HighlightedCode code={code} language={language} />
+          </span>
+        </code>
       </pre>
     </div>
   );

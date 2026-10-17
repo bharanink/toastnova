@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'toastnova';
 import type { ToastPosition, ToastTheme, ToastAnimationPreset, ToastDuplicateStrategy } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
+import { ToastLogViewer } from '../components/ToastLogViewer';
 
 interface PlaygroundSectionProps {
   theme: ToastTheme;
@@ -568,6 +569,9 @@ ${triggerCode}`;
               <div className="doc-code-preview-label">Live Generated Code Snippet</div>
               <CodeBlock language="tsx" code={generateCodeSnippet()} />
             </div>
+
+            {/* Live Event Logs right below trigger & preview */}
+            <ToastLogViewer title="Playground Activity Logs" defaultExpanded={false} />
           </div>
         </div>
       </div>
