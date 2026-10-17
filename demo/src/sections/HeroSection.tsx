@@ -1,7 +1,6 @@
 import React from 'react';
 import { toast } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
-import { ToastLogViewer } from '../components/ToastLogViewer';
 
 interface HeroSectionProps {
   onGoToPlayground: () => void;
@@ -125,9 +124,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onGoToPlayground, onGo
             toast with Action
           </button>
         </div>
-
-        {/* Real-time View Logs Panel below triggers */}
-        <ToastLogViewer title="Hero Quick-Trigger Logs" defaultExpanded={false} />
       </div>
 
       {/* Feature Pillar Grid */}

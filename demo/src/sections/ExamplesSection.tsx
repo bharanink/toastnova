@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { toast } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
-import { ToastLogViewer } from '../components/ToastLogViewer';
 
 export const ExamplesSection: React.FC = () => {
   const [activeUploadId, setActiveUploadId] = useState<string | null>(null);
@@ -217,9 +216,6 @@ toast.warning('Incoming request rate spike detected on gateway.', {
           />
         </div>
       </div>
-
-      {/* Real-time Examples Activity Logs */}
-      <ToastLogViewer title="Interactive Examples Activity Logs" defaultExpanded={false} />
     </section>
   );
 };

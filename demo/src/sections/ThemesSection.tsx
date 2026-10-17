@@ -2,7 +2,6 @@ import React from 'react';
 import { toast } from 'toastnova';
 import type { ToastTheme } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
-import { ToastLogViewer } from '../components/ToastLogViewer';
 
 interface ThemesSectionProps {
   currentTheme: ToastTheme;
@@ -176,9 +175,6 @@ export const ThemesSection: React.FC<ThemesSectionProps> = ({ currentTheme, onSe
           );
         })}
       </div>
-
-      {/* Real-time Theme Trigger Logs */}
-      <ToastLogViewer title="Theme Showcase Logs" defaultExpanded={false} />
     </section>
   );
 };

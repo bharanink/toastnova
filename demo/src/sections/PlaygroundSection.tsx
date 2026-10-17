@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { toast } from 'toastnova';
 import type { ToastPosition, ToastTheme, ToastAnimationPreset, ToastDuplicateStrategy } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
-import { ToastLogViewer } from '../components/ToastLogViewer';
 
 interface PlaygroundSectionProps {
   theme: ToastTheme;
@@ -46,8 +45,8 @@ export const PlaygroundSection: React.FC<PlaygroundSectionProps> = ({
   const [title, setTitle] = useState<string>('Changes Deployed');
   const [message, setMessage] = useState<string>('Production build #1042 was deployed to 12 edge nodes.');
   const [isPersistent, setIsPersistent] = useState<boolean>(false);
-  const [hasAction, setHasAction] = useState<boolean>(true);
-  const [actionLabel, setActionLabel] = useState<string>('View Logs');
+  const [hasAction, setHasAction] = useState<boolean>(false);
+  const [actionLabel, setActionLabel] = useState<string>('Undo');
   const [hasCancel, setHasCancel] = useState<boolean>(false);
   const [cancelLabel, setCancelLabel] = useState<string>('Dismiss');
   const [progressMode, setProgressMode] = useState<'none' | 'determinate' | 'indeterminate'>('none');
@@ -176,8 +175,8 @@ export const PlaygroundSection: React.FC<PlaygroundSectionProps> = ({
     setTitle('Changes Deployed');
     setMessage('Production build #1042 was deployed to 12 edge nodes.');
     setIsPersistent(false);
-    setHasAction(true);
-    setActionLabel('View Logs');
+    setHasAction(false);
+    setActionLabel('Undo');
     setHasCancel(false);
     setCancelLabel('Dismiss');
     setProgressMode('none');
@@ -569,9 +568,6 @@ ${triggerCode}`;
               <div className="doc-code-preview-label">Live Generated Code Snippet</div>
               <CodeBlock language="tsx" code={generateCodeSnippet()} />
             </div>
-
-            {/* Live Event Logs right below trigger & preview */}
-            <ToastLogViewer title="Playground Activity Logs" defaultExpanded={false} />
           </div>
         </div>
       </div>

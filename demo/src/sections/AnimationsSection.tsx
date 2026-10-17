@@ -2,7 +2,6 @@ import React from 'react';
 import { toast } from 'toastnova';
 import type { ToastAnimationPreset } from 'toastnova';
 import { CodeBlock } from '../components/CodeBlock';
-import { ToastLogViewer } from '../components/ToastLogViewer';
 
 interface AnimationsSectionProps {
   currentAnimation: ToastAnimationPreset;
@@ -118,9 +117,6 @@ export const AnimationsSection: React.FC<AnimationsSectionProps> = ({
           );
         })}
       </div>
-
-      {/* Real-time Animation Trigger Logs */}
-      <ToastLogViewer title="Animation Kinematics Logs" defaultExpanded={false} />
     </section>
   );
 };
