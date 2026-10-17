@@ -130,6 +130,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           )}
 
+          {/* Buy Me a Coffee Link */}
+          <a
+            href="https://buymeacoffee.com/bharanink"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="doc-coffee-btn"
+            aria-label="Buy a coffee for the developer"
+            title="Buy a coffee for the developer"
+          >
+            <span className="doc-coffee-icon">☕</span>
+            <span className="doc-coffee-label">Buy a coffee</span>
+          </a>
+
           {/* GitHub Repository Link */}
           <a
             href="https://github.com/bharanink/toastnova"

@@ -41,7 +41,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="doc-footer-links-group">
-          <div className="doc-footer-heading">Community</div>
+          <div className="doc-footer-heading">Support &amp; Community</div>
+          <a
+            href="https://buymeacoffee.com/bharanink"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="doc-footer-link doc-coffee-footer-link"
+          >
+            ☕ Buy Me a Coffee
+          </a>
           <a
             href="https://github.com/bharanink/toastnova"
             target="_blank"

@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?logo=typescript)](tsconfig.json)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/bharanink)
 
 ---
 
@@ -629,6 +630,16 @@ Contributions, bug reports, and suggestions are welcome:
 3. **Run Tests**: Ensure all existing tests pass with `npm test`.
 4. **Code Quality**: Run `npm run typecheck` to verify TypeScript types with zero errors.
 5. **Validation Pipeline**: Run `npm run validate` prior to opening a pull request.
+
+---
+
+## Support the Developer
+
+If you find ToastNova valuable for your applications and want to support ongoing maintenance, new features, and development:
+
+<a href="https://buymeacoffee.com/bharanink" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="42" width="150" />
+</a>
 
 ---
 
